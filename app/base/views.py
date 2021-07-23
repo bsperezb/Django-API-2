@@ -10,4 +10,4 @@ from django.shortcuts import render
         # return render(request, 'base.html')
 
 def ConsumeView(request):
-    return render(request, "base.html")
+    return render(request, "index.html")

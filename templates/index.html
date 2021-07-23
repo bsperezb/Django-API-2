@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <!-- Default theme -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <title>Crud DjangoRest</title>
+    <style>
+    body, button{
+      background-color: #f7f6f6;
+    }
+    table thead{
+      background-color: #6a1b9a;
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+      <button id="btnCrear" type="button" class="btn btn-warning" data-bs-toggle="modal"  >Crear</button> 
+
+      <table id="tableArticulos" class="table mt-2 table-bordered table-striped">
+        <thead>
+          <tr class="text-center">
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Cedula</th>
+            <th>Email</th>
+            <th>Comentarios</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    
+      </table>
+    </div>
+<!-- modal pop up-->
+
+<div class="modal fade" id="modalPersona" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="exampleModalLabel">Crear</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="sexo" class="col-form-label">Sexo:</label>
+            <input type="text" class="form-control" id="sexo">
+          </div>
+          <div class="mb-3">
+            <label for="cedula" class="col-form-label">Cedula:</label>
+            <input type="number" class="form-control" id="cedula">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="comentario" class="col-form-label">Comentario:</label>
+            <textarea class="form-control" id="comentario"></textarea>
+          </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+     </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    {% load static %}
+    <script src="{% static 'code.js' %} "></script>
+  </body>
+</html>

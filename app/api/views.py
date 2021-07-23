@@ -9,14 +9,14 @@ from .models import BaseDatos
 from rest_framework.views import APIView
 from rest_framework import viewsets
 
-#vista basada en modelviewset
+#vista basada en modelviewset---------------------
 class modelviewset_based(viewsets.ModelViewSet):
     serializer_class = BaseDatosSerializer
     queryset = BaseDatos.objects.all()
 
 
 
-#vistas utilizando viewsets
+#vistas utilizando viewsets---------------------
 class Viewsets_based(viewsets.ViewSet):
 
     def list(self, request):
@@ -46,7 +46,7 @@ class Viewsets_based(viewsets.ViewSet):
 
 
 
-#ejercicio 1 clase APIView
+#ejercicio 1 clase APIView---------------------
 class apiview_based(APIView):
 
     def get(self, request):
