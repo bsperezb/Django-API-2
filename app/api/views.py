@@ -9,11 +9,13 @@ from .models import BaseDatos
 from rest_framework.views import APIView
 from rest_framework import viewsets
 
+from rest_framework.permissions import AllowAny
+
 #vista basada en modelviewset---------------------
 class modelviewset_based(viewsets.ModelViewSet):
     serializer_class = BaseDatosSerializer
     queryset = BaseDatos.objects.all()
-
+    permission_classes = [AllowAny]
 
 
 #vistas utilizando viewsets---------------------

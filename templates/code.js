@@ -1,6 +1,10 @@
 // Definicion de variables
 const url = "http://127.0.0.1:8000/api/modelviewset/"; //http://127.0.0.1:8000/api/modelviewset/
 
+
+// Definicion de variables
+const url = "http://127.0.0.1:8000/api/apiview/"; //http://127.0.0.1:8000/api/modelviewset/
+
 const contenedor = document.querySelector('tbody');	//este es el lugar donde interpolarmos los datos del cuerpo de la tabla;
 let resultados = '';
 
@@ -30,22 +34,22 @@ btnCrear.addEventListener('click', ()=>{
 // Funcion para mostrar lso resultados
 const mostrar = (personas) => {
 	personas.forEach(persona => {
-	resultados +=`
+	resultados += `
 					<tr>
 						<td>${persona.nombre}</td>
 						<td>${persona.cedula}</td>
 						<td>${persona.sexo}</td>
-						<td>${persona.mail}</td>
+						<td>${persona.email}</td>
 						<td>${persona.comentario}</td>
 						<td class="text-center"><a class="btnEditar btn btn-primary">Editar</a><a class="btnBorrar btn btn-danger">Borrar</a> </td>
 					</tr>
 					`
 	});
-	resultados.innerHTML = resultados
+	contenedor.innerHTML = resultados
 }
 
 // Procedimiento mostrar
 fetch(url)
-	.then(response => response.json)
+	.then(response => response.json())
 	.then( data => mostrar(data))
 	.catch( error => console.log(error))
