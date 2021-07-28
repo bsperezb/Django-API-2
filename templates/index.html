@@ -35,14 +35,13 @@
   </head>
   <body>
     <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
-      <button id="btnCrear" type="button" class="btn btn-warning" data-bs-toggle="modal"  >Crear</button> 
-
+      <button id="btnCrear" type="button" class="btn btn-warning"   >Crear</button> 
       <table id="tableArticulos" class="table mt-2 table-bordered table-striped">
         <thead>
           <tr class="text-center">
             <th>Nombre</th>
-            <th>Sexo</th>
             <th>Cedula</th>
+            <th>Sexo</th>
             <th>Email</th>
             <th>Comentarios</th>
           </tr>
@@ -74,7 +73,7 @@
           </div>
           <div class="mb-3">
             <label for="cedula" class="col-form-label">Cedula:</label>
-            <input type="number" class="form-control" id="cedula">
+            <input type="cedula" class="form-control" id="cedula">
           </div>
           <div class="mb-3">
             <label for="email" class="col-form-label">Email:</label>
@@ -87,7 +86,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Guardar</button>
       </div>
      </form>

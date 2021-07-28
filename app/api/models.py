@@ -15,9 +15,9 @@ class BaseDatos(models.Model):
     nombre = models.CharField(max_length=100)
     sexo = models.CharField(choices=sex_choices,
                             max_length=9,
-                            default=Masculino)
-    cedula = models.IntegerField(unique=True, blank=False, primary_key=True)
-    email = models.EmailField(max_length=250)
+                            default=Masculino, blank=True)
+    cedula = models.IntegerField(unique=True, blank=True, primary_key=True)
+    email = models.EmailField(max_length=250, blank=True)
     comentario = models.TextField(blank=True)
 
 
